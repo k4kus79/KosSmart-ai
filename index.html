@@ -72,15 +72,17 @@
 
       <!-- Navigation Links -->
       <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
-        <button onclick="switchView('landing')" class="nav-link hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Landing Page</button>
-        <button onclick="switchView('dashboard')" class="nav-link text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors flex items-center gap-2">
+        <button onclick="switchView('landing')" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Landing Page</button>
+        <button onclick="switchView('dashboard')" class="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors flex items-center gap-2">
           <span>Live Demo Dashboard</span>
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
         </button>
-        <a href="#memory-section" onclick="switchView('landing')" class="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Arsitektur Memori</a>
+        <a href="#problems-section" onclick="switchView('landing')" class="text-slate-500 dark:text-slate-400 hover:text-sky-600 transition-colors">Masalah</a>
+        <a href="#workflow-section" onclick="switchView('landing')" class="text-slate-500 dark:text-slate-400 hover:text-sky-600 transition-colors">Workflow & Tim</a>
+        <a href="#memory-section" onclick="switchView('landing')" class="text-slate-500 dark:text-slate-400 hover:text-sky-600 transition-colors">Memori Sistem</a>
       </nav>
 
       <!-- Actions -->
@@ -99,89 +101,237 @@
 
   <!-- MAIN CONTAINER: LANDING PAGE -->
   <main id="view-landing" class="block">
-    <!-- Hero Section -->
+    <!-- 1. Nama Sistem / Solusi Agen (Hero Section) -->
     <section class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-28">
       <div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.sky.100),theme(colors.slate.50))] dark:bg-[radial-gradient(45rem_50rem_at_top,theme(colors.sky.950/40),theme(colors.slate.950))] opacity-70"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-xs font-semibold mb-6 border border-sky-200 dark:border-sky-800">
-          <i class="fa-solid fa-sparkles"></i> Autonomous Boarding House Assistant & Hybrid Memory Architecture
+          <i class="fa-solid fa-sparkles"></i> 01. KosSmart AI (Autonomous Co-Living & Boarding House Assistant)
         </div>
         <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white max-w-4xl mx-auto leading-tight">
-          Kelola Kos Harian Lebih Cerdas dengan <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-indigo-500 dark:from-sky-400 dark:to-indigo-400">4 Agen AI Otonom</span>
+          Sistem Multi-Agen Otonom untuk <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-indigo-500 dark:from-sky-400 dark:to-indigo-400">Pengelolaan Kos Modern</span>
         </h1>
         <p class="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          Otomatisasi penagihan sewa, penanganan keluhan fasilitas, pelayanan calon penyewa 24/7, didukung manajemen memori hibrida (Session, Vector, & State DB).
+          Membantu pemilik atau pengelola kos dalam mengelola pembayaran sewa, menangani keluhan fasilitas (maintenance), melayani pertanyaan calon penyewa (onboarding), hingga memantau aturan operasional secara otomatis.
         </p>
         <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button onclick="switchView('dashboard')" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-base shadow-lg shadow-sky-500/25 transition flex items-center justify-center gap-2">
-            <i class="fa-solid fa-rocket"></i> Coba Demo Interactive Simulator
+            <i class="fa-solid fa-rocket"></i> Coba Demo Simulator Interaktif
           </button>
-          <a href="#memory-section" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 font-semibold text-base hover:bg-slate-50 dark:hover:bg-slate-800 transition text-center">
-            Lihat Struktur Memori Sistem
+          <a href="#problems-section" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 font-semibold text-base hover:bg-slate-50 dark:hover:bg-slate-800 transition text-center">
+            Pelajari Blueprint Lengkap
           </a>
         </div>
       </div>
     </section>
 
-    <!-- MEMORY LAYER SECTION (NEWLY ADDED TO REFLECT BLUEPRINT) -->
-    <section id="memory-section" class="py-20 bg-slate-100/70 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800">
+    <!-- 2. Masalah yang Ingin Ditangani -->
+    <section id="problems-section" class="py-16 bg-slate-100/70 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2">02. Masalah Operasional Kos</h2>
+          <p class="text-3xl font-bold text-slate-900 dark:text-white">Mengapa Pengelolaan Kos Tradisional Melelahkan?</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+            <div class="w-12 h-12 rounded-xl bg-rose-100 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 flex items-center justify-center text-xl font-bold mb-6">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Keterlambatan Pembayaran Sewa</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              Pemilik sering kerepotan mencatat tanggal jatuh tempo dari banyak kamar, sehingga sering harus menagih secara manual satu per satu.
+            </p>
+          </div>
+
+          <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl font-bold mb-6">
+              <i class="fa-solid fa-wrench"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Penanganan Perbaikan Lambat</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              Laporan kerusakan (AC bocor, lampu mati, keran rusak) sering terselip di chat WhatsApp pribadi, membuat perbaikan tertunda dan penyewa tidak nyaman.
+            </p>
+          </div>
+
+          <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+            <div class="w-12 h-12 rounded-xl bg-sky-100 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl font-bold mb-6">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Repetisi Pertanyaan Calon Penghuni</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              Harus menjawab pertanyaan dasar yang sama berulang kali ("Kamar kosong ada AC?", "Tarif listrik?", "Boleh bawa hewan?").
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 & 4. Cara Kerja Tim, Workflow & Anggota Tim -->
+    <section id="workflow-section" class="py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 text-xs font-semibold mb-3">
-            Blueprint Memory Architecture
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 text-xs font-semibold mb-3">
+            03 & 04. Workflow Tim & Supervisor-Worker Pattern
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Cara Kerja Agen dalam Tim & Pola Kerja Sama</h2>
+          <p class="text-slate-600 dark:text-slate-400 mt-4 text-base">
+            Sistem menggunakan alur kerja kolaboratif berbasis event & pipeline dengan pola **Supervisor-Worker**.
+          </p>
+        </div>
+
+        <!-- 4 Anggota Tim Cards -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <!-- Agen 1 -->
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-600 flex items-center justify-center text-2xl font-bold">
+                  <i class="fa-solid fa-headset"></i>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">Worker</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">1. Tenant Inquiry Agent</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Menjawab pertanyaan ketersediaan, fasilitas, dan aturan kos secara instan.</p>
+              <div class="text-xs font-mono bg-slate-50 dark:bg-slate-800 p-2.5 rounded-xl text-slate-600 dark:text-slate-300">
+                <strong>Tools:</strong> RAG berbasis dokumen peraturan kos & FAQ.
+              </div>
+            </div>
+          </div>
+
+          <!-- Agen 2 -->
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-2xl font-bold">
+                  <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">Worker</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">2. Billing & Collection Agent</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Mengirim pengingat tagihan sewa, mencatat, dan mendeteksi keterlambatan.</p>
+              <div class="text-xs font-mono bg-slate-50 dark:bg-slate-800 p-2.5 rounded-xl text-slate-600 dark:text-slate-300">
+                <strong>Tools:</strong> Logika waktu + Gateway Pembayaran / Bank API.
+              </div>
+            </div>
+          </div>
+
+          <!-- Agen 3 -->
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-2xl font-bold">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">Worker</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">3. Maintenance Agent</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Menerima laporan kerusakan, membuat tiket, dan menugaskan staf perbaikan.</p>
+              <div class="text-xs font-mono bg-slate-50 dark:bg-slate-800 p-2.5 rounded-xl text-slate-600 dark:text-slate-300">
+                <strong>Tools:</strong> Computer Vision (baca foto) + Text Classification.
+              </div>
+            </div>
+          </div>
+
+          <!-- Agen 4 (Supervisor) -->
+          <div class="bg-white dark:bg-slate-900 border-2 border-indigo-500/40 rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-indigo-500 text-white text-[10px] uppercase font-extrabold px-3 py-1 rounded-bl-xl">Supervisor</div>
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center text-2xl font-bold">
+                  <i class="fa-solid fa-user-gear"></i>
+                </div>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">4. Property Manager Orchestrator</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Mengkoordinasikan seluruh agen, status kamar, dan laporan pemilik.</p>
+              <div class="text-xs font-mono bg-slate-50 dark:bg-slate-800 p-2.5 rounded-xl text-slate-600 dark:text-slate-300">
+                <strong>Tools:</strong> Rule-based workflow & state machine.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Phase Workflow Pipeline & Collaboration Pattern Explanation -->
+        <div class="grid md:grid-cols-2 gap-8 bg-slate-100 dark:bg-slate-900/60 p-8 rounded-3xl border border-slate-200 dark:border-slate-800">
+          <div>
+            <h4 class="font-bold text-lg mb-4 text-slate-900 dark:text-white"><i class="fa-solid fa-shuffle text-sky-500 mr-2"></i> 4 Fase Workflow Otonom</h4>
+            <ul class="space-y-3 text-xs text-slate-600 dark:text-slate-300">
+              <li><strong>Fase 1 (Inquiry & Onboarding):</strong> Agen Penyewa menjawab 24/7, jadwalkan survei, dan kirim draf sewa.</li>
+              <li><strong>Fase 2 (Billing & Payment):</strong> Agen Keuangan pantau jatuh tempo, kirim WA, dan verifikasi transfer.</li>
+              <li><strong>Fase 3 (Maintenance Ticketing):</strong> Agen Pemeliharaan analisis keparahan foto kerusakan & jadwalkan tukang.</li>
+              <li><strong>Fase 4 (Operational Oversight):</strong> Agen Pengawas rekap tingkat hunian dan laporan bulanan pemilik.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-4 text-slate-900 dark:text-white"><i class="fa-solid fa-handshake text-indigo-500 mr-2"></i> Pola Kerja Sama (Supervisor-Worker)</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+              <strong>Property Manager Orchestrator</strong> bertindak sebagai pengendali pusat.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+              <li>• Jika Billing Agent mendeteksi telat bayar, ia lapor Orchestrator untuk membatasi akses smart lock atau kirim peringatan resmi.</li>
+              <li>• Jika Maintenance Agent terima laporan darurat (pipa jebol), ia koordinasi dengan Orchestrator untuk cari tukang terdekat.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Hal yang Perlu Disimpan di Memori -->
+    <section id="memory-section" class="py-20 bg-slate-100/70 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 text-xs font-semibold mb-3">
+            05. Memory & State Architecture
           </div>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Hal yang Perlu Disimpan di Memori Sistem</h2>
           <p class="text-slate-600 dark:text-slate-400 mt-4 text-base">
-            Untuk menjaga agar agen AI bekerja secara kontekstual, presisi, dan konsisten, KosSmart AI mengimplementasikan 3 lapisan memori hibrida.
+            Sistem membagi manajemen penyimpanan data ke dalam 3 hierarki utama agar agen bekerja secara akurat.
           </p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-          <!-- Short-Term Memory -->
           <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
             <div>
-              <div class="w-12 h-12 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl font-bold mb-6">
+              <div class="w-12 h-12 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 flex items-center justify-center text-xl font-bold mb-6">
                 <i class="fa-solid fa-comments"></i>
               </div>
-              <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">1. Short-Term Memory (Session)</h3>
-              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-                Menyimpan konteks percakapan secara real-time saat calon penyewa sedang menanyakan detail kamar, fasilitas, atau tawar-menawar harga di sesi chat aktif saat ini.
+              <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Short-Term Memory (Session)</h3>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Konteks percakapan saat calon penyewa sedang menanyakan detail kamar atau tawar-menawar harga di sesi chat aktif saat ini.
               </p>
             </div>
-            <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl text-xs font-mono text-slate-500 border border-slate-100 dark:border-slate-800">
-              Scope: Active Chat Session State (Redis / Ephemeral)
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl text-xs font-mono text-slate-500">
+              Scope: Active Chat Session State
             </div>
           </div>
 
-          <!-- Long-Term Vector Memory -->
           <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
             <div>
-              <div class="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl font-bold mb-6">
+              <div class="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 flex items-center justify-center text-xl font-bold mb-6">
                 <i class="fa-solid fa-brain"></i>
               </div>
-              <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">2. Long-Term Vector Memory</h3>
-              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-                Basis pengetahuan (Knowledge Base) berupa dokumen panduan fasilitas, tata tertib penghuni (House Rules), dan riwayat tiket perbaikan kamar untuk mendeteksi pola kerusakan berulang (misal: AC kamar 204 sering rusak).
+              <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Long-Term Vector Memory</h3>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Dokumen panduan fasilitas, House Rules, dan riwayat tiket perbaikan untuk mendeteksi pola kerusakan (misal: AC kamar 204 sering rusak).
               </p>
             </div>
-            <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl text-xs font-mono text-slate-500 border border-slate-100 dark:border-slate-800">
-              Scope: Vector Database (RAG Indexing & History Logs)
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl text-xs font-mono text-slate-500">
+              Scope: Knowledge Base & Vector DB
             </div>
           </div>
 
-          <!-- State / Relational Memory -->
           <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
             <div>
-              <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl font-bold mb-6">
+              <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center text-xl font-bold mb-6">
                 <i class="fa-solid fa-database"></i>
               </div>
-              <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">3. State / Relational Memory</h3>
-              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-                Database operasional yang merekam status hunian tiap kamar (Nomor Kamar, Status Available/Occupied, Nama Penghuni, Kontak) serta data keuangan operasional (Paid, Pending, Overdue).
+              <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">State / Relational Memory</h3>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Status hunian setiap kamar (Available/Occupied, Nama Penghuni, Kontak) & data keuangan operasional (Paid, Pending, Overdue).
               </p>
             </div>
-            <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl text-xs font-mono text-slate-500 border border-slate-100 dark:border-slate-800">
-              Scope: Relational Database (PostgreSQL / Supabase)
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl text-xs font-mono text-slate-500">
+              Scope: Operational Database State Machine
             </div>
           </div>
         </div>
@@ -192,9 +342,9 @@
     <section class="py-16">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-gradient-to-r from-sky-600 to-indigo-600 rounded-3xl p-8 sm:p-12 text-center text-white shadow-xl shadow-sky-500/20">
-          <h2 class="text-3xl font-extrabold mb-4">Siap Mengotomatiskan Pengelolaan Kos Anda?</h2>
+          <h2 class="text-3xl font-extrabold mb-4">Siap Menguji Simulasi KosSmart AI?</h2>
           <p class="text-sky-100 max-w-xl mx-auto mb-8 text-sm sm:text-base">
-            Lihat simulasi interaktif bagaimana agen AI berinteraksi dengan penyewa dan mengelola memori sistem secara live.
+            Uji interaksi agen, cek ledger pembayaran, dan kelola tiket pemeliharaan secara langsung di dashboard.
           </p>
           <button onclick="switchView('dashboard')" class="px-8 py-4 rounded-xl bg-white text-sky-900 font-bold hover:bg-slate-100 transition shadow-lg">
             Buka Live Dashboard Demo Sekarang
@@ -206,294 +356,152 @@
 
   <!-- MAIN CONTAINER: DEMO DASHBOARD -->
   <main id="view-dashboard" class="hidden min-h-screen pb-12">
-    <!-- Sub Header Dashboard Bar -->
     <div class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 sm:px-8 py-4">
       <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <div class="flex items-center gap-2">
             <h1 class="text-xl font-bold text-slate-900 dark:text-white">KosSmart AI Orchestration Center</h1>
-            <span class="px-2 py-0.5 text-xs font-semibold rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">Live Agent Pipeline</span>
+            <span class="px-2 py-0.5 text-xs font-semibold rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">Live Simulation</span>
           </div>
-          <p class="text-xs text-slate-500 dark:text-slate-400">Properti Demo: Executive Kost Residence (24 Kamar)</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Pola Supervisor-Worker & Hybrid Memory Active</p>
         </div>
         
-        <!-- Tab Navigation for Agents View -->
         <div class="flex items-center gap-1 bg-slate-100 dark:bg-slate-800 p-1 rounded-xl w-full sm:w-auto overflow-x-auto text-xs">
           <button onclick="switchDashTab('orchestrator')" id="tab-btn-orchestrator" class="dash-tab-btn px-3 py-2 rounded-lg font-medium transition bg-white dark:bg-slate-700 shadow text-sky-600 dark:text-sky-300">
-            <i class="fa-solid fa-gauge-high mr-1"></i> Orchestrator
+            <i class="fa-solid fa-gauge-high mr-1"></i> Orchestrator & Stats
           </button>
-          <button onclick="switchDashTab('inquiry')" id="tab-btn-inquiry" class="dash-tab-btn px-3 py-2 rounded-lg font-medium transition text-slate-600 dark:text-slate-400 hover:text-slate-900">
-            <i class="fa-solid fa-comments mr-1"></i> Inquiry & Memory
+          <button onclick="switchDashTab('inquiry')" id="tab-btn-inquiry" class="dash-tab-btn px-3 py-2 rounded-lg font-medium transition text-slate-600 hover:text-slate-900">
+            <i class="fa-solid fa-comments mr-1"></i> Inquiry Agent (Chat)
           </button>
-          <button onclick="switchDashTab('billing')" id="tab-btn-billing" class="dash-tab-btn px-3 py-2 rounded-lg font-medium transition text-slate-600 dark:text-slate-400 hover:text-slate-900">
-            <i class="fa-solid fa-receipt mr-1"></i> Billing DB
+          <button onclick="switchDashTab('billing')" id="tab-btn-billing" class="dash-tab-btn px-3 py-2 rounded-lg font-medium transition text-slate-600 hover:text-slate-900">
+            <i class="fa-solid fa-receipt mr-1"></i> Billing & State DB
           </button>
-          <button onclick="switchDashTab('maintenance')" id="tab-btn-maintenance" class="dash-tab-btn px-3 py-2 rounded-lg font-medium transition text-slate-600 dark:text-slate-400 hover:text-slate-900">
-            <i class="fa-solid fa-wrench mr-1"></i> Maintenance
+          <button onclick="switchDashTab('maintenance')" id="tab-btn-maintenance" class="dash-tab-btn px-3 py-2 rounded-lg font-medium transition text-slate-600 hover:text-slate-900">
+            <i class="fa-solid fa-wrench mr-1"></i> Maintenance Tickets
           </button>
         </div>
       </div>
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-
-      <!-- TAB 1: ORCHESTRATOR OVERVIEW -->
+      <!-- DASHBOARD TAB 1 -->
       <div id="dash-panel-orchestrator" class="dash-panel space-y-6">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
-            <div class="flex justify-between items-start">
-              <div>
-                <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">Tingkat Hunian (State DB)</p>
-                <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">91.6%</h3>
-              </div>
-              <span class="w-9 h-9 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center text-lg">
-                <i class="fa-solid fa-bed"></i>
-              </span>
-            </div>
-            <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-2 font-medium">22 dari 24 Kamar Terisi</p>
+            <p class="text-xs font-semibold text-slate-500">Tingkat Hunian (Occupancy)</p>
+            <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">91.6%</h3>
+            <p class="text-xs text-emerald-600 mt-2">22 dari 24 Kamar Terisi</p>
           </div>
-
           <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
-            <div class="flex justify-between items-start">
-              <div>
-                <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">Pendapatan Ledger</p>
-                <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">Rp 48.500.000</h3>
-              </div>
-              <span class="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-lg">
-                <i class="fa-solid fa-wallet"></i>
-              </span>
-            </div>
-            <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-2 font-medium">88% Tagihan Terkumpul</p>
+            <p class="text-xs font-semibold text-slate-500">Pendapatan Bulan Ini</p>
+            <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">Rp 48.500.000</h3>
+            <p class="text-xs text-emerald-600 mt-2">88% Terkumpul (Ledger State)</p>
           </div>
-
           <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
-            <div class="flex justify-between items-start">
-              <div>
-                <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">Tiket Perbaikan Aktif</p>
-                <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">3 Tiket</h3>
-              </div>
-              <span class="w-9 h-9 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 flex items-center justify-center text-lg">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-              </span>
-            </div>
-            <p class="text-xs text-amber-600 dark:text-amber-400 mt-2 font-medium">1 Darurat Dalam Proses</p>
+            <p class="text-xs font-semibold text-slate-500">Tiket Perbaikan Aktif</p>
+            <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">3 Tiket</h3>
+            <p class="text-xs text-amber-600 mt-2">1 Darurat (Vision AI)</p>
           </div>
-
           <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
-            <div class="flex justify-between items-start">
-              <div>
-                <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">Memory Sync Status</p>
-                <h3 class="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 mt-1">Optimal</h3>
-              </div>
-              <span class="w-9 h-9 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-lg">
-                <i class="fa-solid fa-brain"></i>
-              </span>
-            </div>
-            <p class="text-xs text-sky-600 dark:text-sky-400 mt-2 font-medium">Vector & Relational Synced</p>
+            <p class="text-xs font-semibold text-slate-500">Orchestrator Status</p>
+            <h3 class="text-2xl font-extrabold text-indigo-600 dark:text-indigo-400 mt-1">Active</h3>
+            <p class="text-xs text-sky-600 mt-2">Supervisor-Worker Online</p>
           </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div class="lg:col-span-2 bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="font-bold text-slate-900 dark:text-white text-base">Tren Arus Kas & Keterisian Bulanan</h3>
-              <span class="text-xs text-slate-400">Tahun 2026</span>
-            </div>
-            <div class="h-64">
-              <canvas id="occupancyChart"></canvas>
-            </div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-base mb-4">Grafik Tren Pendapatan & Hunian</h3>
+            <div class="h-64"><canvas id="occupancyChart"></canvas></div>
           </div>
-
           <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-4">
-                <h3 class="font-bold text-slate-900 dark:text-white text-base">Log Aktivitas Agen & Memori</h3>
-                <span class="relative flex h-2.5 w-2.5">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                </span>
-              </div>
-              <div id="orchestrator-log-list" class="space-y-3 max-h-72 overflow-y-auto pr-1 text-xs">
-                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 flex items-start gap-2.5">
-                  <i class="fa-solid fa-brain text-sky-500 mt-0.5"></i>
-                  <div>
-                    <span class="font-semibold text-slate-800 dark:text-slate-200">[Vector Memory]</span> Mengindeks ulang panduan fasilitas kos terbaru.
-                    <div class="text-[10px] text-slate-400 mt-1">Baru saja</div>
-                  </div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-base mb-4">Log Koordinasi Tim Agen</h3>
+              <div class="space-y-3 text-xs">
+                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border">
+                  <strong>[Orchestrator]</strong> Menyinkronkan status pembayaran & smart lock akses kamar.
                 </div>
-                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 flex items-start gap-2.5">
-                  <i class="fa-solid fa-database text-emerald-500 mt-0.5"></i>
-                  <div>
-                    <span class="font-semibold text-slate-800 dark:text-slate-200">[State DB]</span> Update status pembayaran Kamar 101 menjadi Paid.
-                    <div class="text-[10px] text-slate-400 mt-1">45 menit lalu</div>
-                  </div>
+                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border">
+                  <strong>[Inquiry Agent]</strong> Merespon calon penyewa menggunakan Vector RAG Knowledge Base.
                 </div>
               </div>
             </div>
-            <button onclick="triggerOrchestratorSync()" class="w-full mt-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold text-xs hover:bg-slate-200 dark:hover:bg-slate-700 transition">
-              <i class="fa-solid fa-arrows-rotate mr-1"></i> Sinkronisasi Memori & State Machine
-            </button>
+            <button onclick="showToast('State Machine Sinkron', 'success')" class="w-full mt-4 py-2 bg-slate-100 dark:bg-slate-800 text-xs font-semibold rounded-xl">Sinkronisasi Manual</button>
           </div>
         </div>
       </div>
 
-      <!-- TAB 2: INQUIRY AGENT & MEMORY INSPECTION -->
+      <!-- DASHBOARD TAB 2 (INQUIRY CHAT) -->
       <div id="dash-panel-inquiry" class="dash-panel hidden space-y-6">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div class="lg:col-span-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex flex-col h-[600px] shadow-sm">
-            <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50/50 dark:bg-slate-800/50 rounded-t-2xl">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-lg">
-                  <i class="fa-solid fa-robot"></i>
-                </div>
-                <div>
-                  <h3 class="font-bold text-slate-900 dark:text-white text-sm">Tenant Inquiry Agent (Short-Term Memory Active)</h3>
-                  <p class="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium">● Session Context Memory Synced</p>
-                </div>
-              </div>
-              <button onclick="resetChat()" class="text-xs text-slate-500 hover:text-slate-800">
-                <i class="fa-solid fa-rotate-left mr-1"></i> Reset Sesi
-              </button>
-            </div>
-
-            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 text-xs sm:text-sm">
-              <div class="flex items-start gap-2.5">
-                <div class="w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center text-xs shrink-0">AI</div>
-                <div class="bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 p-3.5 rounded-2xl rounded-tl-none max-w-[80%] leading-relaxed">
-                  Halo! Saya **Tenant Inquiry Agent** KosSmart AI. Sesi percakapan ini tersimpan dalam *Short-Term Memory* untuk memandu proses onboarding Anda. Ada yang bisa dibantu?
-                </div>
-              </div>
-            </div>
-
-            <div class="p-2 border-t border-slate-100 dark:border-slate-800/80 bg-slate-50/30 dark:bg-slate-900/30 flex gap-2 overflow-x-auto text-xs">
-              <button onclick="sendQuickPrompt('Apakah ada kamar AC kosong dan berapa harganya?')" class="px-3 py-1.5 rounded-full bg-slate-200/70 dark:bg-slate-800 hover:bg-sky-100 text-slate-700 dark:text-slate-300 shrink-0">
-                "Kamar AC kosong & harga?"
-              </button>
-              <button onclick="sendQuickPrompt('Boleh bawa hewan peliharaan tidak?')" class="px-3 py-1.5 rounded-full bg-slate-200/70 dark:bg-slate-800 hover:bg-sky-100 text-slate-700 dark:text-slate-300 shrink-0">
-                "Aturan bawa hewan?"
-              </button>
-            </div>
-
-            <form onsubmit="handleChatSubmit(event)" class="p-3 border-t border-slate-200 dark:border-slate-800 flex gap-2">
-              <input type="text" id="chat-input" placeholder="Tulis pertanyaan di sini..." class="flex-1 bg-slate-100 dark:bg-slate-800 border-0 rounded-xl px-4 py-2.5 text-xs sm:text-sm focus:ring-2 focus:ring-sky-500 text-slate-900 dark:text-white outline-none">
-              <button type="submit" class="px-4 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-xs sm:text-sm transition flex items-center gap-1">
-                <span>Kirim</span>
-                <i class="fa-solid fa-paper-plane text-xs"></i>
-              </button>
-            </form>
-          </div>
-
-          <!-- Memory Inspection Panel -->
-          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
-            <div>
-              <h3 class="font-bold text-slate-900 dark:text-white text-base mb-3">Inspeksi Lapisan Memori</h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">
-                Memantau penyimpanan memori hibrida secara real-time.
-              </p>
-
-              <div class="space-y-3">
-                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800">
-                  <div class="flex justify-between items-center text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
-                    <span><i class="fa-solid fa-comments text-sky-500 mr-1.5"></i> Short-Term Memory</span>
-                    <span class="text-[10px] bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300 px-2 py-0.5 rounded">Active Session</span>
-                  </div>
-                  <p class="text-[11px] text-slate-500 dark:text-slate-400">Menyimpan state tanya-jawab tawar-menawar harga dan preferensi kamar saat ini.</p>
-                </div>
-
-                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800">
-                  <div class="flex justify-between items-center text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
-                    <span><i class="fa-solid fa-brain text-indigo-500 mr-1.5"></i> Vector Memory (KB)</span>
-                    <span class="text-[10px] bg-sky-100 text-sky-800 dark:bg-sky-900/60 dark:text-sky-300 px-2 py-0.5 rounded">RAG Index</span>
-                  </div>
-                  <p class="text-[11px] text-slate-500 dark:text-slate-400">House Rules, panduan fasilitas, dan riwayat tiket perbaikan kamar (AC Kamar 204 pattern).</p>
-                </div>
-
-                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800">
-                  <div class="flex justify-between items-center text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
-                    <span><i class="fa-solid fa-database text-emerald-500 mr-1.5"></i> Relational Memory</span>
-                    <span class="text-[10px] bg-sky-100 text-sky-800 dark:bg-sky-900/60 dark:text-sky-300 px-2 py-0.5 rounded">State DB</span>
-                  </div>
-                  <p class="text-[11px] text-slate-500 dark:text-slate-400">Status hunian kamar & ledger pembayaran sewa (Paid, Pending, Overdue).</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
-              <div class="flex items-center justify-between text-xs">
-                <span class="text-slate-600 dark:text-slate-400">Memory Latency:</span>
-                <span class="font-semibold text-emerald-600 dark:text-emerald-400">&lt; 40ms</span>
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex flex-col h-[550px] shadow-sm max-w-4xl mx-auto">
+          <div class="p-4 border-b flex items-center justify-between bg-slate-50 dark:bg-slate-800 rounded-t-2xl">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold">AI</div>
+              <div>
+                <h3 class="font-bold text-sm">Tenant Inquiry Agent</h3>
+                <p class="text-[11px] text-emerald-600">● Menggunakan Session & Vector Memory</p>
               </div>
             </div>
           </div>
+          <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 text-sm">
+            <div class="flex items-start gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center text-xs shrink-0">AI</div>
+              <div class="bg-slate-100 dark:bg-slate-800 p-3.5 rounded-2xl rounded-tl-none max-w-[80%]">
+                Halo! Saya Tenant Inquiry Agent KosSmart AI. Ada yang bisa saya bantu terkait ketersediaan kamar atau aturan kos?
+              </div>
+            </div>
+          </div>
+          <form onsubmit="handleChatSubmit(event)" class="p-3 border-t flex gap-2">
+            <input type="text" id="chat-input" placeholder="Ketik pertanyaan (misal: kamar kosong, hewan peliharaan)..." class="flex-1 bg-slate-100 dark:bg-slate-800 border-0 rounded-xl px-4 py-2.5 text-sm outline-none">
+            <button type="submit" class="px-4 py-2.5 bg-sky-600 text-white rounded-xl text-sm font-semibold">Kirim</button>
+          </form>
         </div>
       </div>
 
-      <!-- TAB 3: BILLING DATABASE -->
+      <!-- DASHBOARD TAB 3 (BILLING) -->
       <div id="dash-panel-billing" class="dash-panel hidden space-y-6">
         <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-            <div>
-              <h3 class="font-bold text-slate-900 dark:text-white text-lg">Relational Memory - Ledger & Billing DB</h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400">Penyimpanan state status pembayaran sewa bulanan setiap kamar.</p>
-            </div>
-            <button onclick="runBillingAgentCheck()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs transition">
-              Simulasi Cek Jatuh Tempo DB
-            </button>
-          </div>
-
-          <div class="overflow-x-auto">
-            <table class="w-full text-left text-xs sm:text-sm">
-              <thead class="bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 uppercase text-[11px]">
-                <tr>
-                  <th class="px-4 py-3 rounded-l-lg">Kamar</th>
-                  <th class="px-4 py-3">Nama Penghuni</th>
-                  <th class="px-4 py-3">Tagihan Bulanan</th>
-                  <th class="px-4 py-3">Status Bayar (DB State)</th>
-                  <th class="px-4 py-3 rounded-r-lg text-right">Aksi</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
-                <tr>
-                  <td class="px-4 py-3.5 font-bold">Kamar 101</td>
-                  <td class="px-4 py-3.5">Andi Pratama</td>
-                  <td class="px-4 py-3.5">Rp 2.200.000</td>
-                  <td class="px-4 py-3.5"><span class="px-2 py-0.5 rounded text-xs font-semibold bg-emerald-100 text-emerald-800">Paid</span></td>
-                  <td class="px-4 py-3.5 text-right"><button onclick="showToast('Data State Termuat dari DB', 'info')" class="px-3 py-1 rounded bg-slate-100 dark:bg-slate-800 text-xs">Detail</button></td>
-                </tr>
-                <tr>
-                  <td class="px-4 py-3.5 font-bold">Kamar 305</td>
-                  <td class="px-4 py-3.5">Citra Lestari</td>
-                  <td class="px-4 py-3.5">Rp 2.200.000</td>
-                  <td class="px-4 py-3.5"><span class="px-2 py-0.5 rounded text-xs font-semibold bg-rose-100 text-rose-800">Overdue</span></td>
-                  <td class="px-4 py-3.5 text-right"><button onclick="showToast('Mengirim peringatan via Smart Lock & WA', 'warning')" class="px-3 py-1 rounded bg-rose-600 text-white text-xs">Eskalasi</button></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <h3 class="font-bold text-lg mb-4">Relational Memory - Status Pembayaran Kamar</h3>
+          <table class="w-full text-left text-sm">
+            <thead class="bg-slate-50 dark:bg-slate-800 uppercase text-[11px]">
+              <tr><th class="p-3">Kamar</th><th class="p-3">Penghuni</th><th class="p-3">Tagihan</th><th class="p-3">Status DB</th><th class="p-3 text-right">Aksi</th></tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-xs">
+              <tr><td class="p-3 font-bold">Kamar 101</td><td class="p-3">Andi Pratama</td><td class="p-3">Rp 2.200.000</td><td class="p-3"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">Paid</span></td><td class="p-3 text-right"><button onclick="showToast('Resi terkirim', 'success')" class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded">Kirim Resi</button></td></tr>
+              <tr><td class="p-3 font-bold">Kamar 305</td><td class="p-3">Citra Lestari</td><td class="p-3">Rp 2.200.000</td><td class="p-3"><span class="px-2 py-0.5 rounded bg-rose-100 text-rose-800 font-semibold">Overdue</span></td><td class="p-3 text-right"><button onclick="showToast('Peringatan Smart Lock & WA terkirim', 'warning')" class="px-3 py-1 bg-rose-600 text-white rounded">Tagih & Lock</button></td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
-      <!-- TAB 4: MAINTENANCE -->
+      <!-- DASHBOARD TAB 4 (MAINTENANCE) -->
       <div id="dash-panel-maintenance" class="dash-panel hidden space-y-6">
         <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm">
-          <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Vector Memory - Riwayat Kerusakan & Pola</h3>
-          <p class="text-xs text-slate-500 mb-6">Mendeteksi pola kerusakan berulang pada kamar tertentu berdasarkan riwayat tiket sebelumnya.</p>
-          <div class="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900 text-xs text-amber-800 dark:text-amber-300">
-            <i class="fa-solid fa-triangle-exclamation mr-2 font-bold"></i> **Vector Insight:** AC di Kamar 204 tercatat mengalami gangguan sebanyak 3 kali dalam 3 bulan terakhir. Direkomendasikan penggantian unit baru.
+          <h3 class="font-bold text-lg mb-2">Maintenance Ticketing & Vision AI</h3>
+          <p class="text-xs text-slate-500 mb-6">Analisis tingkat keparahan dan dispatcher tukang otomatis.</p>
+          <div class="grid md:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 border rounded-xl bg-slate-50 dark:bg-slate-800">
+              <span class="font-bold text-rose-600">#M-102 • Kamar 104 (Darurat)</span>
+              <p class="mt-1">Pipa Air Mandi Bocor. Vision AI mendeteksi tingkat keparahan 94%.</p>
+              <div class="mt-3 font-semibold text-slate-700 dark:text-slate-300">Ditugaskan ke: Pak Slamet (Tukang Ledeng)</div>
+            </div>
+            <div class="p-4 border rounded-xl bg-slate-50 dark:bg-slate-800">
+              <span class="font-bold text-amber-600">#M-103 • Kamar 201 (Medium)</span>
+              <p class="mt-1">AC Tidak Dingin. Vision AI mendeteksi filter tersumbat.</p>
+              <div class="mt-3 font-semibold text-slate-700 dark:text-slate-300">Ditugaskan ke: Teknisi Jaya AC</div>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-slate-200 dark:border-slate-800 py-8 bg-white dark:bg-slate-900">
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-8 bg-white dark:bg-slate-900 mt-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
       <div class="flex items-center gap-2">
         <i class="fa-solid fa-building-user text-sky-600"></i>
-        <span class="font-bold text-slate-700 dark:text-slate-300">KosSmart AI Platform</span>
-        <span>© 2026. Updated with Hybrid Memory Architecture.</span>
+        <span class="font-bold text-slate-700 dark:text-slate-300">KosSmart AI Blueprint Platform</span>
       </div>
       <div class="flex gap-4">
         <button onclick="switchView('landing')" class="hover:underline">Landing Page</button>
@@ -502,7 +510,7 @@
     </div>
   </footer>
 
-  <!-- Application Logic JavaScript -->
+  <!-- Scripts -->
   <script>
     const themeToggleBtn = document.getElementById('theme-toggle');
     themeToggleBtn.addEventListener('click', () => {
@@ -529,14 +537,14 @@
       document.querySelectorAll('.dash-panel').forEach(panel => panel.classList.add('hidden'));
       document.querySelectorAll('.dash-tab-btn').forEach(btn => {
         btn.classList.remove('bg-white', 'dark:bg-slate-700', 'shadow', 'text-sky-600', 'dark:text-sky-300');
-        btn.classList.add('text-slate-600', 'dark:text-slate-400');
+        btn.classList.add('text-slate-600');
       });
       const targetPanel = document.getElementById(`dash-panel-${tabName}`);
       const targetBtn = document.getElementById(`tab-btn-${tabName}`);
       if (targetPanel && targetBtn) {
         targetPanel.classList.remove('hidden');
         targetBtn.classList.add('bg-white', 'dark:bg-slate-700', 'shadow', 'text-sky-600', 'dark:text-sky-300');
-        targetBtn.classList.remove('text-slate-600', 'dark:text-slate-400');
+        targetBtn.classList.remove('text-slate-600');
       }
     }
 
@@ -545,56 +553,24 @@
       const input = document.getElementById('chat-input');
       const text = input.value.trim();
       if (!text) return;
-      appendUserMessage(text);
+      
+      const container = document.getElementById('chat-messages');
+      container.innerHTML += `<div class="flex items-start justify-end gap-2.5"><div class="bg-sky-600 text-white p-3 rounded-2xl rounded-tr-none max-w-[80%]">${escapeHtml(text)}</div></div>`;
       input.value = '';
-      setTimeout(() => generateAgentReply(text), 700);
-    }
-
-    function sendQuickPrompt(promptText) {
-      document.getElementById('chat-input').value = promptText;
-      handleChatSubmit(new Event('submit'));
-    }
-
-    function appendUserMessage(msgText) {
-      const container = document.getElementById('chat-messages');
-      container.innerHTML += `
-        <div class="flex items-start justify-end gap-2.5">
-          <div class="bg-sky-600 text-white p-3.5 rounded-2xl rounded-tr-none max-w-[80%] leading-relaxed">${escapeHtml(msgText)}</div>
-          <div class="w-8 h-8 rounded-full bg-slate-300 dark:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center text-xs shrink-0 font-bold">Anda</div>
-        </div>
-      `;
       container.scrollTop = container.scrollHeight;
-    }
 
-    function generateAgentReply(userText) {
-      const container = document.getElementById('chat-messages');
-      container.innerHTML += `
-        <div class="flex items-start gap-2.5">
-          <div class="w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center text-xs shrink-0">AI</div>
-          <div class="bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 p-3.5 rounded-2xl rounded-tl-none max-w-[80%] leading-relaxed">
-            Terima kasih! Konteks ini telah dicatat dalam **Short-Term Session Memory**. Saat ini tersedia Kamar 102 tipe Executive AC (Rp 2.200.000/bulan).
-          </div>
-        </div>
-      `;
-      container.scrollTop = container.scrollHeight;
-    }
-
-    function resetChat() {
-      showToast('Short-term session memory dibersihkan', 'info');
-    }
-
-    function triggerOrchestratorSync() {
-      showToast('Sinkronisasi Vector & Relational Memory berhasil!', 'success');
-    }
-
-    function runBillingAgentCheck() {
-      showToast('Membaca state relational database pembayaran...', 'info');
+      setTimeout(() => {
+        let reply = "Terima kasih! Sesi ini tersimpan dalam short-term memory. Saat ini tersedia Kamar 102 tipe Executive AC (Rp 2.200.000/bulan).";
+        if (text.toLowerCase().includes('hewan')) reply = "Berdasarkan Vector Memory House Rules, hewan peliharaan tidak diperkenankan.";
+        container.innerHTML += `<div class="flex items-start gap-2.5"><div class="w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center text-xs shrink-0">AI</div><div class="bg-slate-100 dark:bg-slate-800 p-3 rounded-2xl rounded-tl-none max-w-[80%]">${reply}</div></div>`;
+        container.scrollTop = container.scrollHeight;
+      }, 700);
     }
 
     function showToast(message, type = 'info') {
       const container = document.getElementById('toast-container');
       const toast = document.createElement('div');
-      let badgeColor = type === 'success' ? 'bg-emerald-650' : (type === 'warning' ? 'bg-amber-600' : 'bg-sky-600');
+      let badgeColor = type === 'success' ? 'bg-emerald-600' : (type === 'warning' ? 'bg-amber-600' : 'bg-sky-600');
       toast.className = `pointer-events-auto px-4 py-3 rounded-xl bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 shadow-xl text-xs font-medium flex items-center gap-3 transition-all transform translate-y-2 opacity-0`;
       toast.innerHTML = `<span class="w-2 h-2 rounded-full ${badgeColor}"></span><span>${escapeHtml(message)}</span>`;
       container.appendChild(toast);
